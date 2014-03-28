@@ -19,25 +19,25 @@ def sample_name_validator(value):
 
 
 Sample = class_factory(
-    class_name = 'Sample',
-    doc = 'MPC 1000 Sample',
-    format = (
-        '<'   # Little-endian
-        '16s' # Sample Name
-        'x'   # Padding
-        'B'   # Level
-        'B'   # Range Upper
-        'B'   # Range Lower
-        'h'   # Tuning
-        'B'   # Play Mode       0="One Shot", 1="Note On"
-        'x'   # Padding
+    class_name='Sample',
+    doc='MPC 1000 Sample',
+    format=(
+        '<'  # Little-endian
+        '16s'  # Sample Name
+        'x'  # Padding
+        'B'  # Level
+        'B'  # Range Upper
+        'B'  # Range Lower
+        'h'  # Tuning
+        'B'  # Play Mode       0="One Shot", 1="Note On"
+        'x'  # Padding
     ),
-    format_attrs = (
+    format_attrs=(
         ('sample_name', sample_name_validator),
-        ('level',       int_in_range_validator(0, 100)),
+        ('level', int_in_range_validator(0, 100)),
         ('range_upper', int_in_range_validator(0, 127)),
         ('range_lower', int_in_range_validator(0, 127)),
-        ('tuning',      int_in_range_validator(-3600, 3600)),
-        ('play_mode',   int_in_range_validator(0, 1)),
+        ('tuning', int_in_range_validator(-3600, 3600)),
+        ('play_mode', int_in_range_validator(0, 1)),
     ),
 )
