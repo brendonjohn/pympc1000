@@ -5,13 +5,16 @@ FILE
     mpc1000/__init__.py
 
 PACKAGE CONTENTS
-    mpc1k
+    Pad
+    Program
+    Sample
+    utils
 
 CLASSES
     __builtin__.object
-        mpc1000.mpc1k.Pad
-        mpc1000.mpc1k.Program
-        mpc1000.mpc1k.Sample
+        mpc1000.Pad.Pad
+        mpc1000.Program.Program
+        mpc1000.Program.Sample
     
     class Pad(__builtin__.object)
      |  MPC 1000 Pad
