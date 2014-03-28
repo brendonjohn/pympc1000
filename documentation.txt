@@ -5,6 +5,7 @@ FILE
     mpc1000/__init__.py
 
 PACKAGE CONTENTS
+    mpc1k
     Pad
     Program
     Sample
